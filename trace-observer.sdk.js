@@ -1,5 +1,5 @@
-
-// Universal Web3 Fingerprint SDK: TraceObserver
+// Universal Web3 Fingerprint SDK: TraceObserver 
+// by Jesse Hudelson of Rugdox LLC - See MIT License
 (function (global) {
   const TraceObserver = {
     config: {},
@@ -76,15 +76,23 @@
     },
 
     async submit(endpoint = null) {
+      if (!this.config.submitEndpoint && !endpoint) {
+        console.warn('[TraceObserver] No submit endpoint defined. Trace will not be sent.');
+        return null;
+      }
       const finalized = await this.finalize();
-      const url = endpoint || this.config.submitEndpoint || 'https://your-server.com/trace/submit';
-      await fetch(url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(finalized)
-      });
-      if (this.config.debug) {
-        console.log('[TraceObserver] Trace submitted:', finalized);
+      const url = endpoint || this.config.submitEndpoint;
+      try {
+        await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(finalized)
+        });
+        if (this.config.debug) {
+          console.log('[TraceObserver] Trace submitted:', finalized);
+        }
+      } catch (err) {
+        console.error('[TraceObserver] Submission failed:', err);
       }
       return finalized;
     },
