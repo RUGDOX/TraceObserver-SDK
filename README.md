@@ -1,11 +1,3 @@
-[ Vercel Hosted Demo: https://trace-observer-sdk.vercel.app/ ]
-
-For the TraceObserver SDK ready for use in your project, please visit:
-[ https://github.com/Jesse-21/TraceObserver-SDK ]
--or-
-
--------------------------------------------------------------
-
 
 ## 🧬 TraceObserver SDK DEMO
 
