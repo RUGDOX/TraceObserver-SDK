@@ -25,12 +25,12 @@ It works entirely on the client, streams via CDN, and supports any Web3 app or f
 ---
 
 Perfect for:
-	-  Fraud detection
-	-  Risk scoring
-	-  Account security & recovery
-	-  Web3 identity fingerprinting
-	-  Cross-wallet behavior linking
-	-  Rug pull forensics (Unmask Protocol compatible)
+	- Fraud detection
+	- Risk scoring
+	- Account security & recovery
+	- Web3 identity fingerprinting
+	- Cross-wallet behavior linking
+	- Rug pull forensics (Unmask Protocol compatible)
 
 ⸻
 
