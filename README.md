@@ -91,12 +91,12 @@ TraceObserver turns the invisible into immutable evidence:
 
 ⸻
 
-Built for the Next Generation of Web3 Forensics
+**Built for the Next Generation of Web3 Forensics**
 
 # This SDK powers:
-- 	•	Web3DNA Global Identity Engine
-- 	•	Unmask Protocol for founder accountability
-- 	•	RugDox Risk Scoring & Verification Systems
+- Web3DNA Global Identity Engine
+- Unmask Protocol for founder accountability
+- RugDox Risk Scoring & Verification Systems
 
 ⸻
 
