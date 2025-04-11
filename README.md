@@ -103,9 +103,9 @@ TraceObserver turns the invisible into immutable evidence:
 # 💥 Get Started
 
 Clone, serve, or CDN:
-
+''''js
 <script src="https:// <URL-Of-Your-Chosen-SDK-Source> /trace-observer.sdk.js"></script>
-
+''''
 You must pass submitEndpoint via .init() or .submit(endpoint)
 
 Remember:
