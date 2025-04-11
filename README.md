@@ -68,13 +68,13 @@ Signal Type	Details:
 
 # What You Get
 
-- 	•	✅ Fully client-side, browser-native SDK
-- 	•	✅ No dependencies, ultra-lightweight
-- 	•	✅ Works with all EVM wallets, especially MetaMask
-- 	•	✅ Built for CDN delivery (can host via Vercel/Cloudflare)
-- 	•	✅ Plug in your own scoring, AI, or rules engine
-- 	•	✅ export() method for offline trace analysis
-- 	•	✅ Use in wallets, platforms, NFTs, bridges, DeFi, anything
+- ✅ Fully client-side, browser-native SDK
+- ✅ No dependencies, ultra-lightweight
+- ✅ Works with all EVM wallets, especially MetaMask
+- ✅ Built for CDN delivery (can host via Vercel/Cloudflare)
+- ✅ Plug in your own scoring, AI, or rules engine
+- ✅ export() method for offline trace analysis
+- ✅ Use in wallets, platforms, NFTs, bridges, DeFi, anything
 
 ⸻
 
@@ -83,11 +83,11 @@ Signal Type	Details:
 Web3 needs more than signatures — it needs evidence of presence.
 
 TraceObserver turns the invisible into immutable evidence:
-- 	•	Catch bot-driven airdrop abuse
-- 	•	Prevent identity cloaking during RugID issuance
-- 	•	Detect rug-pull operations in progress
-- 	•	Link malicious actors across wallets and browsers
-- 	•	De-anonymize repeated wallet factory spammers
+- Catch bot-driven airdrop abuse
+- Prevent identity cloaking during RugID issuance
+- Detect rug-pull operations in progress
+- Link malicious actors across wallets and browsers
+- De-anonymize repeated wallet factory spammers
 
 ⸻
 
@@ -109,11 +109,11 @@ Clone, serve, or CDN:
 You must pass submitEndpoint via .init() or .submit(endpoint)
 
 Remember:
-	•	If you’re streaming the SDK via a CDN this config is passed client-side only
-	•	The submitEndpoint can be:
-	•	A webhook (e.g. Webhook.site)
-	•	Your real backend (e.g. https://api.your-server.url/trace/submit)
-	•	A proxy server that logs or inspects the fingerprint
+- If you’re streaming the SDK via a CDN this config is passed client-side only
+- The submitEndpoint can be:
+- A webhook (e.g. Webhook.site)
+- Your real backend (e.g. https://api.your-server.url/trace/submit)
+- A proxy server that logs or inspects the fingerprint
 
 
 EXAMPLE:
@@ -148,11 +148,10 @@ EXAMPLE:
 ⸻
 
 # Dev Notes
-- 	•	Framework agnostic
--  	•	ES module & IIFE versions supported
-- 	•	Extendable with WebGL, audio, canvas, timezone, font entropy
-- 	•	Compatible with federated learning / AI modeling systems
-
+- Framework agnostic
+- ES module & IIFE versions supported
+- Extendable with WebGL, audio, canvas, timezone, font entropy
+- Compatible with federated learning / AI modeling systems
 ⸻
 
 #  Vision
