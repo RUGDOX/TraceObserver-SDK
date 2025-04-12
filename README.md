@@ -106,9 +106,9 @@ Clone, serve, or CDN:
 
 <script src="https:// <URL-Of-Your-Chosen-SDK-Source> /trace-observer.sdk.js"></script>
 
-You must pass submitEndpoint via .init() or .submit(endpoint)
+- You must pass submitEndpoint via .init() or .submit(endpoint)
 
-Remember:
+## Remember:
 - If you’re streaming the SDK via a CDN this config is passed client-side only
 - The submitEndpoint can be:
 - A webhook (e.g. Webhook.site)
@@ -116,9 +116,12 @@ Remember:
 - A proxy server that logs or inspects the fingerprint
 
 
-EXAMPLE:
-
+## EXAMPLE:
+'''
 <script src="https://cdn.your-site-url.com/trace-observer.sdk.js"></script>
+'''
+
+'''
 <script>
   TraceObserver.init({
     platform_id: "UNMASK_PLATFORM",
@@ -144,7 +147,7 @@ EXAMPLE:
     console.log('Trace submitted:', result);
   }
 </script>
-
+'''
 ⸻
 
 # Dev Notes
