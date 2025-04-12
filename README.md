@@ -117,11 +117,11 @@ Clone, serve, or CDN:
 
 
 ## EXAMPLE:
-'''
+>
 <script src="https://cdn.your-site-url.com/trace-observer.sdk.js"></script>
-'''
 
-'''
+
+
 <script>
   TraceObserver.init({
     platform_id: "UNMASK_PLATFORM",
@@ -147,7 +147,8 @@ Clone, serve, or CDN:
     console.log('Trace submitted:', result);
   }
 </script>
-'''
+
+
 ⸻
 
 # Dev Notes
