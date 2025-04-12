@@ -1,5 +1,5 @@
 
-## 🧬 TraceObserver SDK DEMO
+## 🧬 TraceObserver SDK
 
 Zero-Trust. Infinite Signal.
 
