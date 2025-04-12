@@ -9,6 +9,9 @@ Used by Unmask Protocol and RugDox to protect Web3 users by capturing invisible 
 
 Vercel Hosted Demo:  https://trace-observer-sdk.vercel.app
 
+Use in Projects (CDN)
+
+jsdelivr: https://cdn.jsdelivr.net/gh/RUGDOX/TraceObserver-SDK/
 
 
 ## What Is It?
