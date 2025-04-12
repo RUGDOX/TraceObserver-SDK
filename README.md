@@ -7,9 +7,9 @@ Zero-Trust. Infinite Signal.
 
 Used by Unmask Protocol and RugDox to protect Web3 users by capturing invisible behavioral entropy.
 
-[ Vercel Hosted Demo:  https://trace-observer-sdk.vercel.app ]
+Vercel Hosted Demo:  https://trace-observer-sdk.vercel.app
 
-⸻
+
 
 ## What Is It?
 
@@ -22,9 +22,9 @@ Used by Unmask Protocol and RugDox to protect Web3 users by capturing invisible 
 
 It works entirely on the client, streams via CDN, and supports any Web3 app or frontend. Submissions are sent to any server endpoint you define.
 
----
 
-Perfect for:
+
+## Perfect for:
 - Fraud detection
 - Risk scoring
 - Account security & recovery
@@ -32,11 +32,11 @@ Perfect for:
 - Cross-wallet behavior linking
 - Rug pull forensics (Unmask Protocol compatible)
 
-⸻
+
 
 # What It Captures
 
-Signal Type	Details:
+## Signal Type ---> Details:
 -  RPC Trace Timing	    --->   Method-by-method latency fingerprint during wallet operations
 -  Focus/Blur Entropy	  --->   Wallet popup behavior, user reflex pattern
 -  Memory Signature	    --->   JS heap usage deltas hinting at browser/device load
@@ -46,9 +46,9 @@ Signal Type	Details:
 -  SHA-256 Fingerprint  --->   Final hash digest of entire interaction
 -  Basic Risk Analysis  --->   Output from custom scoring (optional)
 
----
 
-## 💾 SDK Methods
+
+## SDK Methods
 
 - `init(config)` – Starts SDK with runtime config
 - `setScorer(fn)` – Inject custom scoring function
@@ -56,15 +56,15 @@ Signal Type	Details:
 - `submit(endpoint?)` – Submits to endpoint
 - `export()` – Returns trace data locally
 
----
 
-## 🛡️ Security Notes
+
+## Security Notes
 
 - No PII is collected
 - Passive by default (submission requires `submit()`)
 - Fully client-side and CDN compatible
 
----
+
 
 # What You Get
 
@@ -76,9 +76,9 @@ Signal Type	Details:
 - ✅ export() method for offline trace analysis
 - ✅ Use in wallets, platforms, NFTs, bridges, DeFi, anything
 
-⸻
 
-# 🧠 Why It Matters
+
+# Why It Matters
 
 Web3 needs more than signatures — it needs evidence of presence.
 
@@ -89,7 +89,7 @@ TraceObserver turns the invisible into immutable evidence:
 - Link malicious actors across wallets and browsers
 - De-anonymize repeated wallet factory spammers
 
-⸻
+
 
 **Built for the Next Generation of Web3 Forensics**
 
@@ -98,65 +98,82 @@ TraceObserver turns the invisible into immutable evidence:
 - Unmask Protocol for founder accountability
 - RugDox Risk Scoring & Verification Systems
 
-⸻
-
-# 💥 Get Started
-
-Clone, serve, or CDN:
-
-<script src="https:// <URL-Of-Your-Chosen-SDK-Source> /trace-observer.sdk.js"></script>
-
-- You must pass submitEndpoint via .init() or .submit(endpoint)
-
-## Remember:
-- If you’re streaming the SDK via a CDN this config is passed client-side only
-- The submitEndpoint can be:
-- A webhook (e.g. Webhook.site)
-- Your real backend (e.g. https://api.your-server.url/trace/submit)
-- A proxy server that logs or inspects the fingerprint
 
 
-## EXAMPLE:
->
-<script src="https://cdn.your-site-url.com/trace-observer.sdk.js"></script>
+# ⚙️ How It Works
+
+The **TraceObserver SDK** passively collects behavioral signals and session entropy from users interacting with your site or dApp. It generates a cryptographic fingerprint (Web3DNA) that can be submitted to your backend, stored, or used in real-time risk scoring.
 
 
 
-<script>
-  TraceObserver.init({
-    platform_id: "UNMASK_PLATFORM",
-    wallet: "0x123...abc",  // optional: for RugID linkage
-    submitEndpoint: "https://api.unmask-server/trace/submit", // ✅ required for sending
-    captureUserInput: true,
-    enableFocusEvents: true,
-    enableMemorySampling: true,
-    debug: true
-  });
+🛠️ 1. Load the SDK
 
-  // Optional: plug in your own scoring function
-  TraceObserver.setScorer(trace => {
-    let risk = 0;
-    if (trace.rpcTimeline.length > 10) risk += 20;
-    if (trace.userActions.length < 3) risk += 40;
-    return { score: risk, flagged: risk > 40 };
-  });
+Load via CDN or serve statically:
 
-  // Later, after a wallet interaction or on button click:
-  async function sendTrace() {
-    const result = await TraceObserver.submit();
-    console.log('Trace submitted:', result);
-  }
-</script>
+```
+<script src="https://cdn.yourdomain.com/trace-observer.sdk.js"></script>
+```
+
 
 
 ⸻
+
+⚙️ 2. Initialize the SDK
+
+```
+TraceObserver.init({
+  platform_id: "UNMASK_PROTOCOL",                         // Your project or app name
+  wallet: "0x123...abc",                                   // Optional wallet ID
+  submitEndpoint: "https://your-api.com/trace/submit",    // Where to send trace data
+  captureUserInput: true,                                 // Track clicks, movement, scrolls
+  enableFocusEvents: true,                                // Detect alt-tab or popup focus
+  enableMemorySampling: true,                             // Monitor memory usage
+  debug: true                                              // Console logs for debugging
+});
+```
+
+
+⸻
+
+🧠 3. (Optional) Add a Custom Scoring Engine
+
+```
+TraceObserver.setScorer(trace => {
+  let score = 0;
+  if (trace.rpcTimeline.length > 10) score += 20;
+  if (trace.userActions.length < 3) score += 40;
+  return { score, flagged: score > 40 };
+});
+```
+
+This lets you define what risky or suspicious behavior looks like for your system.
+
+
+
+📤 4. Submit the Trace
+
+```
+const result = await TraceObserver.submit();
+```
+This packages the trace, hashes the session data, adds your risk score, and sends it to the configured endpoint.
+
+
+
+📦 Optional: Export Without Submitting
+
+```
+const localTrace = TraceObserver.export();
+```
+Use this if you want to inspect or store the trace locally or feed it into another system.
+
+
 
 # Dev Notes
 - Framework agnostic
 - ES module & IIFE versions supported
 - Extendable with WebGL, audio, canvas, timezone, font entropy
 - Compatible with federated learning / AI modeling systems
-⸻
+
 
 #  Vision
 
@@ -166,4 +183,4 @@ When the scam hits, you’ll know who, how, and what led to it.
 
 TraceObserver is your silent watcher in a trustless world.
 
-⸻
+
